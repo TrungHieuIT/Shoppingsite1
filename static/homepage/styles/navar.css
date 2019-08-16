@@ -1,0 +1,15 @@
+.page_menu{
+    margin-top: -1px;
+}
+.main_nav{
+    background: linear-gradient(DeepSkyBlue, Black);
+}
+.cat_menu_container ul {
+    display: none;  
+}
+.cat_menu_container ul li:hover{
+    display: block;
+}
+.hassubs ul li{
+   background-color: navy;
+}
