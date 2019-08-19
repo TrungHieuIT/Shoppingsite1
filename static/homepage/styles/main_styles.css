@@ -44,6 +44,7 @@
 
 *
 {
+	
 	margin: 0;
 	padding: 0;
 	-webkit-font-smoothing: antialiased;
@@ -510,6 +511,7 @@ section
 
 .header_main
 {
+	background: linear-gradient(rgb(251, 255, 5),rgb(182, 165, 18));
 	z-index: 1;
 }
 .header.scrolled .header_main
@@ -1299,6 +1301,7 @@ select option
 
 .characteristics
 {
+	background: linear-gradient(rgb(251, 255, 5),rgb(182, 165, 18));
 	padding-top: 70px;
 	padding-bottom: 70px;
 }
@@ -1306,9 +1309,17 @@ select option
 {
 	width: 100%;
 	height: 100px;
-	box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
-	border: solid 1px #e8e8e8;
-	padding-left: 36px;
+	border-radius: 50px;
+	background: linear-gradient(DeepSkyBlue, Black);
+	padding-left: 25px;
+}
+.char_item:hover
+{
+	width: 100%;
+	height: 100px;
+	border-radius: 50px;
+	background: #df3b3b;
+
 }
 .char_icon
 {
@@ -1320,15 +1331,16 @@ select option
 }
 .char_title
 {
-	font-size: 14px;
+	font-size: 20px;
 	font-weight: 500;
-	color: #000000;
+	color: #ffe602;
 }
 .char_subtitle
 {
+	padding-left: 60px;
 	font-size: 12px;
 	font-weight: 400;
-	color: rgba(0,0,0,0.5);
+	color:#ffe602;
 	margin-top: 3px;
 }
 
@@ -1338,6 +1350,7 @@ select option
 
 .deals_featured
 {
+	background: linear-gradient(rgb(204, 205, 226),rgb(123, 133, 128));
 	width: 100%;
 }
 
@@ -1577,6 +1590,7 @@ select option
 }
 .tabs
 {
+	margin-bottom: 15px; 
 	width: 100%;
 }
 .tabs ul li
@@ -2113,7 +2127,9 @@ select option
 }
 .banner_2_item
 {
-	height: 580px;
+	
+	background: #7599b2;
+	height: 650px;
 }
 .banner_2_content
 {
@@ -2123,6 +2139,19 @@ select option
 {
 	width: 100%;
 	height: 100%;
+}
+.owl-carousel .owl-item img {
+  
+}
+.deals_image_hot img{
+	display: block;
+	height: 300px;
+    width: 100%;
+}
+.banner_2_image img{
+	display: block;
+	height: 650px;
+    width: 100%;
 }
 .banner_2_image
 {
@@ -2164,6 +2193,21 @@ select option
 .banner_2_rating
 {
 	margin-top: 18px;
+}
+.banner_2_category{
+	color: #d7fc07;
+	font-size: 25px;
+}
+.banner_2_title{
+	color: #ad37a7;
+	font-size: 35px;
+}
+.banner_2_text{
+	color: #000;
+	font-size:25px;
+}
+.banner_2_button:hover{
+	background: #da1717;
 }
 .rating_r i::before
 {
@@ -2227,6 +2271,7 @@ select option
 
 .new_arrivals
 {
+	background: linear-gradient(rgb(181, 183, 221),rgb(124, 131, 127));
 	width: 100%;
 	padding-top: 96px;
 	padding-bottom: 96px;
@@ -2534,11 +2579,13 @@ select option
 
 .best_sellers
 {
+	background: linear-gradient(rgb(181, 183, 221),rgb(124, 131, 127));
 	padding-top: 56px;
-	background: #eff6fa;
+
 	padding-bottom: 50px;
 	margin-top: -77px;
 }
+
 .bestsellers_panel
 {
 	display: none;
@@ -2829,12 +2876,13 @@ select option
 }
 .trends_overlay
 {
+
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: rgba(203, 225, 238, 0.3);
+	background: linear-gradient(rgb(181, 183, 221),rgb(124, 131, 127));
 }
 .trends_background
 {
