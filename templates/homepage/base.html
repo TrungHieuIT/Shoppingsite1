@@ -19,6 +19,8 @@
 
 {% include 'homepage/navbar.html' %}  <!-- phan ke thua -->
 
+{% block mainWeb %}
+
 {% include 'homepage/giaoHangMienPhi.html' %}
 
 {% include 'homepage/sanPhamCuaTuan.html' %}
@@ -31,7 +33,10 @@
 
 {% include 'homepage/xuHuongCuaNam.html' %}
 
+{% endblock %}
+
 {% include 'homepage/footer.html' %} <!-- phan ke thua -->
+
 
 
 {% block jsblock %} <!-- phan css  va bootstrap-->

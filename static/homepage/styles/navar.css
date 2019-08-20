@@ -1,6 +1,16 @@
 *{
     font-family: sans-serif;
 }
+.carousel-inner img{
+    height: 300px;
+    width: 100%;
+    position: relative;
+}
+.carousel-indicators li{
+	width: 20px;
+	height: 20px;
+	border-radius: 100%;
+  }
 
 .page_menu{
     margin-top: -1px;
@@ -13,7 +23,6 @@
 }
 .standard_dropdown li
 {
-	
 	display: inline-block;
 	position: relative;
 	height: 56px;
