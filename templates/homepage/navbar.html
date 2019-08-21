@@ -1,4 +1,6 @@
+
 {% load static %}
+
 <!--header-->
 <header class="header">
 
@@ -90,7 +92,6 @@
 		</div>
 
 		<!-- Main Navigation -->
-
 		<nav class="main_nav">
 			<div class="container">
 				<div class="row">
@@ -106,18 +107,15 @@
 									<div class="cat_menu_text">Danh Mục Sản Phẩm</div>
 								</div>
 
-					
-								<ul class="cat_menu">
-									<li><a href="#">LapTop<i class="fas fa-chevron-right ml-auto"></i></a></li>
-									<li><a href="#">Máy Ảnh<i class="fas fa-chevron-right"></i></a></li>
-									<li><a href="#">Điện Thoại & Máy Tính Bảng<i class="fas fa-chevron-right"></i></a></li>
-									<li><a href="#">TV & Audio<i class="fas fa-chevron-right"></i></a></li>
-									<li><a href="#">Trò Chơi<i class="fas fa-chevron-right"></i></a></li>
-									<li><a href="#">Phụ Kiện<i class="fas fa-chevron-right"></i></a></li>
-								</ul>
-						
-
+								{% block content %}
+									<ul class="cat_menu">
+									{% for item in listscan %}
+										<li><a href="#">{{ item.cate_name }}</a></li>
+										{% endfor %}
+									</ul>
+								{% endblock %}
 							</div>
+
 
 							<!-- Main Nav Menu -->
 
