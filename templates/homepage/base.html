@@ -9,23 +9,38 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-{% block cssblock%}
-    {% endblock%}
+{% block cssblock%} <!-- css -->
+
+{% endblock%} <!-- css --> 
 </head>
 
 
 <body>
-{% include 'homepage/navbar.html' %}
 
-{% block content %}
+{% include 'homepage/navbar.html' %}  <!-- phan ke thua -->
+
+{% block mainWeb %}
+
+{% include 'homepage/giaoHangMienPhi.html' %}
+
+{% include 'homepage/sanPhamCuaTuan.html' %}
+
+{% include 'homepage/sanPhamCucHot.html' %}
+
+{% include 'homepage/sanPhamChinhHang.html' %}
+
+{% include 'homepage/sanPhamBanNhieu.html' %}
+
+{% include 'homepage/xuHuongCuaNam.html' %}
 
 {% endblock %}
 
-{% include 'homepage/footer.html' %}
+{% include 'homepage/footer.html' %} <!-- phan ke thua -->
 
 
-{% block jsblock %}
 
-{% endblock %}
+{% block jsblock %} <!-- phan css  va bootstrap-->
+
+{% endblock %} <!-- phan css va bootstrap -->
 </body>
 </html>

@@ -16,8 +16,8 @@
 							</div>
 							<div class="top_bar_user">
 								<div class="user_icon"><img src="{% static 'homepage/images/user.svg' %}" alt=""></div>
-								<div><a href="#">Đăng Ký</a></div>
-								<div><a href="#">Đăng Nhập</a></div>
+								<div><a href="dangky">Đăng Ký</a></div>
+								<div><a href="dangnhap">Đăng Nhập</a></div>
 							</div>
 						</div>
 					</div>
@@ -34,7 +34,7 @@
 					<!-- Logo -->
 					<div class="col-lg-2 col-sm-3 col-3 order-1">
 						<div class="logo_container">
-							<div class="logo"><a href="#">OU Shoppe</a></div>
+							<div class="logo"><a href="#">OU Shop</a></div>
 						</div>
 					</div>
 
@@ -68,13 +68,7 @@
 					<!-- Wishlist -->
 					<div class="col-lg-4 col-9 order-lg-3 order-2 text-lg-left text-right">
 						<div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
-							<div class="wishlist d-flex flex-row align-items-center justify-content-end">
-								<div class="wishlist_icon"><img src="{% static 'homepage/images/heart.png' %}" alt=""></div>
-								<div class="wishlist_content">
-									<div class="wishlist_text"><a href="#">Wishlist</a></div>
-									<div class="wishlist_count">115</div>
-								</div>
-							</div>
+							
 
 							<!-- Cart -->
 							<div class="cart">
@@ -84,7 +78,7 @@
 										<div class="cart_count"><span>10</span></div>
 									</div>
 									<div class="cart_content">
-										<div class="cart_text"><a href="#">Cart</a></div>
+										<div class="cart_text"><a href="#">Giỏ Hàng</a></div>
 										<div class="cart_price">$85</div>
 									</div>
 								</div>
@@ -211,5 +205,47 @@
 				</div>
 			</div>
 		</div>
+
+		<div id="slides" class="carousel slide border" data-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-target="#slides" data-slide-to="0" class="active"></li>
+				<li data-target="#slides" data-slide-to="1"></li>
+				<li data-target="#slides" data-slide-to="2"></li>
+				<li data-target="#slides" data-slide-to="3"></li>
+				<li data-target="#slides" data-slide-to="4"></li>
+			
+			
+			</ol>
+		
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img  src="{% static 'homepage/images/caro1.jpg' %}" alt="">
+				
+			</div>
+			 <div class="carousel-item">
+				<img  src="{% static 'homepage/images/caro2.jpg' %}" alt="">
+			</div>
+			<div class="carousel-item">
+				<img  src="{% static 'homepage/images/caro3.jpg' %}" alt="">
+			</div>
+
+			<div class="carousel-item">
+				<img  src="{% static 'homepage/images/caro4.jpg' %}" alt="">
+			</div>
+
+			<div class="carousel-item">
+				<img  src="{% static 'homepage/images/caro6.jpg' %}" alt="">
+			</div>
+
+
+			
+		<a class="carousel-control-prev" href="#slides" data-slide="prev">
+			<span class="carousel-control-prev-icon"></span>
+		</a>
+		<a class="carousel-control-next" href="#slides" data-slide="next">
+			<span class="carousel-control-next-icon"></span>
+		</a>
+	
+	</div>
 
 	</header>
