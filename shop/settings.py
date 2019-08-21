@@ -32,16 +32,16 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'core',
-    'cart',
-    'product',
-    'order',
-    'user',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
 ]
 
 MIDDLEWARE = [
@@ -124,8 +124,21 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-AUTH_USER_MODEL = 'user.CustomerUser'
+#AUTH_USER_MODEL = 'user.CustomerUser'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'static')
 ]
+#AUTH_USER_MODEL = 'core.CustomerUser'
+
+STATIC_URL = '/static/'
+VENV_PATH = os.path.dirname(BASE_DIR)
+STATIC_ROOT = os.path.join(VENV_PATH, 'static_root')
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(VENV_PATH, 'media')
+
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
+SITE_ID = 1
