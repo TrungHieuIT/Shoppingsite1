@@ -1,0 +1,25 @@
+{% extends 'homepage/index.html' %}
+{% load static %}
+{% block mainWeb %}
+
+<div class="h1_title"><h1>Laptop</h1></div>
+
+<div class="container-fluid padding">
+        <div class="row padding">
+        {% for item in listscan %}
+            <div class="col-md-3">
+                <div class="card">
+                        <img class="card-img-top" src= "{% static 'homepage/images/'%}{{item.pro_image}}"  alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">{{item.pro_name}}</h4>
+                        <p class="card-text">{{item.pro_price}}</p>
+                        <a href="#" class="btn btn-outline-secondary">Xem</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+</div>
+    
+
+{% endblock %}
