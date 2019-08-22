@@ -23,12 +23,10 @@ def dangnhap(request):
 def chiTiet(request,id):
     productcate = Product.objects.filter(pro_id = id)
     context = {'productcate' : productcate }
-
     return render(request,'homepage/chiTietSanPham.html')
 
 def productCate(request,id):
     listCategory = Category.objects.all()
     productcate = Product.objects.filter(cate_id = id)
     context = {'productcate' : productcate ,'listscan' :listCategory}
-
     return render(request,'homepage/sanPhamDanhMuc.html',context)
