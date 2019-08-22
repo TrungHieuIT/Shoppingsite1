@@ -17,14 +17,10 @@ def dangky(request):
 def dangnhap(request):
     return render(request,'homepage/dangnhap.html')
 
-def categories(request):
+
+def productCate(request,id):
     listCategory = Category.objects.all()
-    context = {'listscan' : listCategory}
-    return render(request, 'homepage/navbar.html', context)
+    productcate = Product.objects.filter(cate_id = id)
+    context = {'productcate' : productcate ,'listscan' :listCategory}
 
-
-
-def laptop(request):
-    listLaptop = Product.objects.all()
-    context = {'listscan' : listLaptop}
-    return render(request,'homepage/laptop.html',context=context)
+    return render(request,'homepage/sanPhamDanhMuc.html',context)

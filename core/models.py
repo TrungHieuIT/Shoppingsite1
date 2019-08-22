@@ -34,3 +34,19 @@ class Product (models.Model):
     def __str__(self):
             return self.pro_name
     
+
+#class Order (models.Model):
+   # order_id = models.AutoField(primary_key = 'true')
+   # user_id = models.ForeignKey(User , on_delete = models.CASCADE)
+   # total = models.FloatField()
+
+
+
+#class User (models.Model):
+  #  user_id = models.AutoField(primary_key = 'true')
+  #  user_name = models.CharField(max_length = 50)
+  #  phone = models.CharField(default='',max_length=15)
+  #  address = models.CharField(default='',max_length=250)
+
+   # def __str__(self):
+   #         return self.user_name
