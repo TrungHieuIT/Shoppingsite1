@@ -10,7 +10,9 @@
         {% for item in productcate %}
             <div class="col-md-3">
                 <div class="card">
-                        <img class="card-img-top" src= "{% static 'homepage/images/'%}{{item.pro_image}}"  alt="">
+                        <div class="inner">
+                            <img class="card-img-top" src= "{% static 'homepage/images/'%}{{item.pro_image}}"  alt="">
+                        </div>
                         <div class="overlay">
                             <button type="button" class="btn btn-secondary" title="Xem chi tiet">
                                 <i class="fa fa-eye"></i>
