@@ -21,3 +21,6 @@ def categories(request):
     listCategory = Category.objects.all()
     context = {'listscan' : listCategory}
     return render(request, 'homepage/navbar.html', context)
+
+def laptop(request):
+    return render(request,'homepage/laptop.html')

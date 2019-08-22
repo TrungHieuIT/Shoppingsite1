@@ -1,0 +1,56 @@
+
+{% extends 'homepage/index.html' %}
+{% load static %}
+{% block mainWeb %}
+<div class="h1_title"><h1>LapTop</h1></div>
+<div class="container-fluid padding">
+        <div class="row padding">
+            <div class="col-md-3">
+                <div class="card">
+                    <img class="card-img-top" src="{% static 'homepage/images/mac.jpg' %}" alt="">
+                    <div class="overlay">
+                    <button type="button" class="btn btn-secondary" title="Xem chi tiet">
+                        <i class="fa fa-eye"></i>
+                    </button>
+                    <button type="button" class="btn btn-secondary" title="Đánh dấu">
+                            <i class="fa fa-heart"></i>
+                    </button>
+                    <button type="button" class="btn btn-secondary" title="Xem chi tiet">
+                            <i class="fa fa-shopping-cart"></i>
+                    </button>
+                </div>
+                    <div class="card-body">
+                        <h4 class="card-title">MacBook</h4>
+                        <p class="card-text">100000000000</p>
+                        <a href="#" class="btn btn-outline-secondary">Xem</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                    <div class="card">
+                        <img class="card-img-top" src="{% static 'homepage/images/mac.jpg' %}" alt="">
+                        <div class="overlay">
+                        <button type="button" class="btn btn-secondary" title="Xem chi tiet">
+                            <i class="fa fa-eye"></i>
+                        </button>
+                        <button type="button" class="btn btn-secondary" title="Đánh dấu">
+                                <i class="fa fa-heart"></i>
+                        </button>
+                        <button type="button" class="btn btn-secondary" title="Xem chi tiet">
+                                <i class="fa fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                        <div class="card-body">
+                            <h4 class="card-title">MacBook</h4>
+                            <p class="card-text">100000000000</p>
+                            <a href="#" class="btn btn-outline-secondary">Xem</a>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+</div>
+    
+
+{% endblock %}
