@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views import View
 from django.http import HttpResponse,HttpResponseRedirect
-from .models import Product,Category
+from .models import Product,Category,Brand,Cart,Order,Variation,User
 
 # Create your views here.
 
@@ -21,10 +21,13 @@ def dangky(request):
 def dangnhap(request):
     return render(request,'homepage/dangnhap.html')
 def chiTiet(request,id):
+    listCategory = Category.objects.all()
     productcate = Product.objects.filter(pro_id = id)
-    context = {'productcate' : productcate }
+    detail = Product.objects.get(pro_id = id)
+    detailBrand = Brand.objects.all()
+    context = {'productcate' : productcate,'listscan' :listCategory,'detail' :detail ,'detailBrand' :detailBrand }
 
-    return render(request,'homepage/chiTietSanPham.html')
+    return render(request,'homepage/chiTietSanPham.html',context=context)
 
 def productCate(request,id):
     listCategory = Category.objects.all()
