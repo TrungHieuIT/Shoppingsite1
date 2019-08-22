@@ -5,5 +5,6 @@ urlpatterns = [
     path('', HomeView.as_view(), name ='index'),
     path('dangky/',views.dangky,name="dang ky"),
     path('dangnhap/',views.dangnhap,name="dang nhap"),
+    path('chiTietSanPham/<int:id>/',views.chiTiet,name="chi tiet san pham"),
     path('sanpham/<int:id>/',views.productCate,name="san pham thuoc danh muc "),
 ]

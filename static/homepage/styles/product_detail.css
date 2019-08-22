@@ -1,0 +1,26 @@
+.container_details{
+    margin-top: 150px;
+}
+.image_detail {
+    width: 400px;
+    height: 400px;
+    transition: transform .2s;
+}
+.image_detail:hover{
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5); 
+    transform: scale(1.5); 
+}
+.product_quantity {
+    width: 182px;
+    height: 150px;
+    border: solid 1px #e5e5e5;
+    border-radius: 5px;
+    overflow: hidden;
+    padding-left: 25px;
+    float: left;
+    margin-right: 30px;
+}
+.quantity_inc i {
+    width: 150px;
+}

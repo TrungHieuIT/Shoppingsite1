@@ -11,7 +11,18 @@
             <div class="col-md-3">
                 <div class="card">
                         <img class="card-img-top" src= "{% static 'homepage/images/'%}{{item.pro_image}}"  alt="">
-                    <div class="card-body">
+                        <div class="overlay">
+                            <button type="button" class="btn btn-secondary" title="Xem chi tiet">
+                                <i class="fa fa-eye"></i>
+                            </button>
+                            <button type="button" class="btn btn-secondary" title="Đánh dấu">
+                                    <i class="fa fa-heart"></i>
+                            </button>
+                            <button type="button" class="btn btn-secondary" title="Xem chi tiet">
+                                    <i class="fa fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                        <div class="card-body">
                         <h4 class="card-title">{{item.pro_name}}</h4>
                         <p class="card-text">{{item.pro_price}} VND</p>
                         <a href="/productdetail/{{item.pro_id}}" class="btn btn-outline-secondary">Xem</a>
