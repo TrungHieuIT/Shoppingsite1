@@ -9,8 +9,12 @@ class HomeView(View):
     def get(self,request):
         list = Product.objects.all().order_by('-pro_id')
         listCategory = Category.objects.all()
-        context = {'listscan' : listCategory,'listProduct' : list}
+        brand = Brand.objects.all()
+        context = {'listscan' : listCategory,'listProduct' : list,'brand':brand}
         return render(request,'homepage/index.html', context=context)
+
+   
+    
     
     
 
@@ -21,14 +25,16 @@ def dangky(request):
 def dangnhap(request):
     return render(request,'homepage/dangnhap.html')
 
-def giohang(request):
+def cart(request):
     return render(request,'homepage/giohang.html')
-def chiTiet(request,id):
+
+def detail(request,id):
     listCategory = Category.objects.all()
     productcate = Product.objects.filter(pro_id = id)
     detail = Product.objects.get(pro_id = id)
     detailBrand = Brand.objects.all()
-    context = {'productcate' : productcate,'listscan' :listCategory,'detail' :detail ,'detailBrand' :detailBrand }
+    otherPro = Product.objects.filter(cate_id = detail.cate_id)
+    context = {'productcate' : productcate,'listscan' :listCategory,'detail' :detail ,'detailBrand' :detailBrand ,'otherPro':otherPro}
 
     return render(request,'homepage/chiTietSanPham.html',context=context)
 
@@ -38,3 +44,4 @@ def productCate(request,id):
     productcate = Product.objects.filter(cate_id = id)
     context = {'productcate' : productcate ,'listscan' :listCategory}
     return render(request,'homepage/sanPhamDanhMuc.html',context)
+

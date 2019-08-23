@@ -183,15 +183,16 @@
 				
 				<div class="product_image d-flex flex-column align-items-center justify-content-center">
 				<div class="inner">
-				<img src="{% static 'homepage/images/'%}{{item.pro_image}}" alt="">
+				<img src="{% static 'media/'%}{{item.pro_image}}" alt="{{item.pro_name}}">
 				</div>
 				</div>
 				<div class="product_content">
 					
-					<div class="product_price discount">{{item.pro_price}}VND<span>$300</span></div>
+					<div class="product_price discount">{{item.pro_price}}VND<span></span></div>
 					<div class="product_name"><div>{{item.pro_name}}</div></div>
 					
 					<div class="product_extras">
+					
 						<button class="product_cart_button">Add to Cart</button>
 					</div>
 				</div>
