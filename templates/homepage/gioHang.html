@@ -1,0 +1,121 @@
+{% extends 'homepage/index.html' %}
+{% load static %}
+{% block mainWeb %}
+
+<div class="cart-page-product">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-8">
+                    <article class="card card-product">
+                    <div class="card-body">
+                    <div class="row">
+                    <aside class="col-lg-3">
+                        <div class="img-wrap"><img src="{% static 'homepage/images/phone/6s.png' %}" alt=""></div>
+                    </aside> 
+                    <article class="col-lg-5">
+                            <h4 class="title"> MacBook </h4>
+                            
+                            <p>100000</p>
+                        
+                    </article> 
+                        
+                    </div> 
+                    </div> 
+                </article> 
+
+                <article class="card card-product">
+                        <div class="card-body">
+                        <div class="row">
+                        <aside class="col-lg-3">
+                                <div class="img-wrap"><img src="{% static 'homepage/images/phone/6s.png' %}" alt=""></div>
+                        </aside> 
+                        <article class="col-lg-5">
+                                <h4 class="title"> MacBook </h4>
+                                
+                                <p>100000</p>
+                            
+                        </article> 
+                            
+                        </div> 
+                        </div> 
+                    </article> 
+
+                    <article class="card card-product">
+                            <div class="card-body">
+                            <div class="row">
+                            <aside class="col-lg-3">
+                                    <div class="img-wrap"><img src="{% static 'homepage/images/phone/6s.png' %}" alt=""></div>
+                            </aside> 
+                            <article class="col-lg-5">
+                                    <h4 class="title"> MacBook </h4>
+                                    
+                                    <p>100000</p>
+                                
+                            </article> 
+                                
+                            </div> 
+                            </div> 
+                        </article> 
+
+                        <article class="card card-product">
+                                <div class="card-body">
+                                <div class="row">
+                                <aside class="col-lg-3">
+                                        <div class="img-wrap"><img src="{% static 'homepage/images/phone/6s.png' %}" alt=""></div>
+                                </aside> 
+                                <article class="col-lg-5">
+                                        <h4 class="title"> MacBook </h4>
+                                        
+                                        <p>100000</p>
+                                    
+                                </article> 
+                                    
+                                </div> 
+                                </div> 
+                        </article> 
+
+                            <article class="card card-product">
+                                    <div class="card-body">
+                                    <div class="row">
+                                    <aside class="col-lg-3">
+                                        <div class="img-wrap"><img src="{% static 'homepage/images/phone/6s.png' %}" alt=""></div>
+                                    </aside> 
+                                    <article class="col-lg-5">
+                                            <h4 class="title"> MacBook </h4>
+                                            
+                                            <p>100000</p>
+                                        
+                            </article> 
+                                        
+                                    </div> 
+                                    </div> 
+                                </article> 
+                
+            </div>
+
+           
+            <div class="col-lg-4 border-left">
+                
+                <div class="action-wrap">
+                    <div class="tongQuanThanhToan">
+                    <h6>Tổng quan thanh toán</h6>
+                    <p class="text-success">Tổng giá sản phẫm</p>
+                    <p class="text-success">Phí vận chuyển</p>
+                    <p class="text-success">VAT :</p>
+                    <p class="text-success">Tổng tiền</p>
+                </div>
+                    <br>
+                    <p class="bt_btnthanhtoan">
+                        <a href="#" id="tienHanhThanhToan" class="btn btn-primary">Tiến hành thanh toán </a>
+                        <a href="#" id="thanhToanQuaThe" class="btn btn-primary">Thanh toán qua thẻ </a>
+                        <a href="#" id="quayLaiMuaHang" class="btn btn-primary">Quay lại mua hàng </a>
+                    </p>
+                </div> 
+            </div> 
+     
+        </div>
+        </div>
+    </div>
+
+{% include 'homepage/sanPhamLienQuan.html' %}
+{% endblock %}

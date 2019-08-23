@@ -20,6 +20,9 @@ def dangky(request):
 
 def dangnhap(request):
     return render(request,'homepage/dangnhap.html')
+
+def giohang(request):
+    return render(request,'homepage/giohang.html')
 def chiTiet(request,id):
     listCategory = Category.objects.all()
     productcate = Product.objects.filter(pro_id = id)

@@ -1300,25 +1300,28 @@ select option
 
 .characteristics
 {
-	background-image: repeating-linear-gradient(45deg, rgb(185, 183, 62), rgb(176, 179, 49) 7%, 
+	background-image: repeating-linear-gradient(45deg, rgb(172, 171, 160), rgb(100, 100, 98) 7%, 
   rgb(100, 99, 92) 10%);
-	padding-top: 70px;
-	padding-bottom: 70px;
+	padding-top: 30px;
+	
+	padding-bottom: 30px;
 }
 .char_item
 {
-	width: 100%;
-	height: 100px;
-	border-radius: 50px;
-	background: linear-gradient(DeepSkyBlue, Black);
+	padding: 35px;
+	overflow: hidden;
+	width: 110%;
+	height: 150px;
 	padding-left: 25px;
+}
+.char_item img{
+	width: 70px;
+	height: 70px;
+
 }
 .char_item:hover
 {
-	width: 100%;
-	height: 100px;
-	border-radius: 50px;
-	background: #df3b3b;
+
 
 }
 .char_icon
@@ -1337,7 +1340,7 @@ select option
 }
 .char_subtitle
 {
-	padding-left: 60px;
+
 	font-size: 12px;
 	font-weight: 400;
 	color:#ffe602;
