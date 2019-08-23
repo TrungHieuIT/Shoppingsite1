@@ -15,8 +15,8 @@ class HomeView(View):
     
 
 
-def dangky(request):
-    return render(request,'homepage/dangky.html')
+#def dangky(request):
+    #return render(request,'homepage/dangky.html')
 
 def dangnhap(request):
     return render(request,'homepage/dangnhap.html')
