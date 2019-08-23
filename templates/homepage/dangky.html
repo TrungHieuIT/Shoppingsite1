@@ -3,20 +3,32 @@
 
 {% block mainWeb %}
 
- <div class="to">
-            <div class="form">
-                <h2>Đăng ký thành viên</h2>
+ 
+            <!--<div class="form"  action="register" method="post">
+            {% csrf_token %}
+               <h2>Đăng ký thành viên</h2>
                 <label style="margin-left: -150px;"> Tên Đăng Nhập</label>
-                <input type="text" name="hoten">
+                <input type="text" name="user_name">
                 <label>Số điện thoại</label>
-                <input type="text" name="sdt">    
+                <input type="text" name="phone">    
                 <label style="margin-left: -180px;">Email</label>
                 <input type="text" name="email"> 
                 <label style="margin-left: -180px;">Mật Khẩu</label>
                 <input type="text" name="password"> 
-                <input id="submit" type="submit" name="submit" value="Gửi">
-            </div>                
-</div>  
+                
+
+
+            </div>    -->
+            <center>
+            <form action='.' method='POST'>
+                {% csrf_token %}
+                {{form.as_p}}
+                <input type="submit" value="Đăng Ký">
+            </form>
+            </center>
+
+
+ 
 
 {% include 'homepage/sanPhamLienQuan.html' %}
 {% endblock %}

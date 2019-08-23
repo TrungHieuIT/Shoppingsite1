@@ -1295,16 +1295,49 @@ select option
 }
 
 /*********************************
-5. Characteristics
+5.giao hang mien phí
 *********************************/
+.flip3D-BannerFrist > .flip3d-forn{
+	position: absolute;
+	transform: perspective(600px) rotateY(0deg);
+	backface-visibility: hidden;
+	transition: transform .5s linear 0s;	
+	border-radius:50px 0px 50px 0px;
+   
+	background: linear-gradient(100deg,rgb(107, 133, 36), rgb(15, 34, 8));
+}
+
+.flip3D-BannerFrist > .flip3d-back{
+	position: absolute;
+	transform: perspective(600px) rotateY(180deg);
+	backface-visibility: hidden;
+	transition: transform .5s linear 0s;
+	border-radius:0px 50px 0px 50px;
+
+	background: #4971a0;
+	
+}
+
+.flip3D-BannerFrist:hover .flip3d-forn{
+	transform: perspective(600px) rotateY(-180deg);
+}
+
+
+.flip3D-BannerFrist:hover .flip3d-back{
+	transform: perspective(600px) rotateY(0deg);
+}
+
+
+
+
+
 
 .characteristics
 {
-	background-image: repeating-linear-gradient(45deg, rgb(172, 171, 160), rgb(100, 100, 98) 7%, 
-  rgb(100, 99, 92) 10%);
+	background-image: linear-gradient(0deg, rgb(20, 19, 20), rgb(189, 177, 177));
 	padding-top: 30px;
 	
-	padding-bottom: 30px;
+	padding-bottom: 200px;
 }
 .char_item
 {
@@ -1321,7 +1354,7 @@ select option
 }
 .char_item:hover
 {
-
+	
 
 }
 .char_icon
@@ -1692,7 +1725,11 @@ select option
 	background: #FFFFFF;
 	cursor: pointer;
 	padding-top: 40px;
-	z-index: 0;
+    
+}
+.product_item:hover .overlay{
+    margin-left: 5%;
+    transition: 0.5s;
 }
 .slick-active .product_item:hover
 {

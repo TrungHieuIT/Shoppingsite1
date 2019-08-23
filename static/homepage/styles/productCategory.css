@@ -5,6 +5,7 @@
     top:10%;
     margin-left: 0;
     width: 70px;
+    
 }
 .card:hover .overlay{
     opacity: 1;
