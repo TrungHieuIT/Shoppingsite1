@@ -6,26 +6,7 @@
 
 		<!-- Top Bar -->
 
-		<div class="top_bar">
-			<div class="container">
-				<div class="row">
-					<div class="col d-flex flex-row">
-						<div class="top_bar_contact_item"><div class="top_bar_icon"><img src="{% static 'homepage/images/phone.png' %}" alt=""></div>+84 934917477</div>
-						<div class="top_bar_contact_item"><div class="top_bar_icon"><img src="{% static 'homepage/images/mail.png' %}" alt=""></div><a href="mailto:nguyentrunghieu3979@gmail.com">nguyentrunghieu3979@gmail.com</a></div>
-						<div class="top_bar_content ml-auto">
-							<div class="top_bar_menu" id="translate_select">
-
-							</div>
-							<div class="top_bar_user">
-								<div class="user_icon"><img src="{% static 'homepage/images/icon/user.svg' %}" alt=""></div>
-								<div><a href="/accounts/register">Đăng Ký</a></div>
-								<div><a href="/dangnhap">Đăng Nhập</a></div>
-
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+	
 		</div>
 
 		<!-- Header Main -->
@@ -69,10 +50,8 @@
 					</div>
 
 					<!-- Wishlist -->
-					<div class="col-lg-4 col-9 order-lg-3 order-2 text-lg-left text-right">
+					<div class="col-lg-2 col-9 order-lg-3 order-2 text-lg-left text-right">
 						<div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
-							
-
 							<!-- Cart -->
 							<div class="cart">
 								<div class="cart_container d-flex flex-row align-items-center justify-content-end">
@@ -87,6 +66,18 @@
 								</div>
 							</div>
 						</div>
+					</div>
+
+
+					<div class="col-lg-2 col-9 order-lg-3 order-2 text-lg-left text-right">
+						{% if user.username %}
+							<p>Xin chào {{user.username}}</p>
+							<p><a id="btnDangXuat" href="{% url 'logout' %}">Đăng Xuất </a></p>
+							{% else %}
+							<p id="areaDkDn" ><a id="btnDangKy" href="{% url 'register' %}" >Đăng Ký | </a>
+								<a id="btnDangNhap" href="{% url 'login' %}">Đăng Nhập</a>
+							</p>
+						{% endif %}
 					</div>
 				</div>
 			</div>

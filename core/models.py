@@ -92,4 +92,3 @@ class Variation(models.Model):
 
     class Meta:
         db_table = "Variation"
-

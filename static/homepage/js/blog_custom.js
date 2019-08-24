@@ -12,6 +12,17 @@
 
 ******************************/
 
+
+$('.product_details').imagesLoaded( function() {
+	$("#exzoom").exzoom({
+		  autoPlay: false,
+	  });
+	$("#exzoom").removeClass('hidden')
+  });
+  
+  
+
+
 $(document).ready(function()
 {
 	"use strict";
