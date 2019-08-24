@@ -9,13 +9,13 @@
     transition: transform .2s;
 }
 
-/*s
+
 .image_detail:hover{
     -ms-transform: scale(1.5);
     -webkit-transform: scale(1.5); 
     transform: scale(1.5); 
 }
-*/
+
 .product_quantity {
     width: 182px;
     height: 150px;
