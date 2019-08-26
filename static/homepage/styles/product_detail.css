@@ -29,3 +29,18 @@
 .quantity_inc i {
     width: 150px;
 }
+#quantity_input{
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #56CCF2;
+    background-color: #eee;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-left: 10px;
+}
+#btn_themGioHang_Details{
+    margin-top: 20px;
+}

@@ -1,0 +1,40 @@
+{% extends 'homepage/index.html' %}
+{% load static %}
+{% block mainWeb %}
+<dialog id="modal_quickView">
+
+<div class="container">
+    
+        <div class="container_details">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="detail">
+                        <img id="zoom_01" class="image_detai" src="{% static 'media/'%}{{detail.pro_image}}" alt="">
+                    </div>
+                </div>
+        <div class="col-md-7">
+            <h2>{{detail.pro_name}}</h2>
+            <p class="price_detail">{{detail.pro_price}}VND</p>
+            <p class="cate">Hãng : {{detail.bra_id}}</p>
+            <p class="cate">Năm sản xuất : {{detail.pro_year}}</p>
+            <div class="product_quantity clearfix">
+                <span>Số lượng: </span>
+                <input id="quantity_input" type="text" pattern="[0-9]*" value="1">
+                <div class="quantity_buttons">
+                    <div id="quantity_inc_button" class="quantity_inc quantity_control"><i class="fas fa-chevron-up"></i></div>
+                    <div id="quantity_dec_button" class="quantity_dec quantity_control"><i class="fas fa-chevron-down"></i></div>
+                </div>
+            </div>
+            <div class="button_container">
+                <button type="button" class="button cart_button">Thêm vào giỏ hàng</button>
+                <div class="product_fav"><i class="fas fa-heart"></i></div>
+            </div>
+            </div>
+
+        </div>
+    </div>
+
+    
+</div> 
+</dialog>
+{% endblock %}

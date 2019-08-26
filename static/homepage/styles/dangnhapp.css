@@ -55,4 +55,22 @@ input[type="text"] {
 .submit:hover{
  
     background: linear-gradient(to right, #050505, #3f5efb); 
+}*/
+#form_dangNhap{
+    background: rgb(61, 163, 163);
+    color: cornsilk;
+    padding: 55px;
+    width: 500px;
+}
+input#id_password{
+    margin-left: 56px;
+    width: 250px;
+}
+#btn_dangNhap{
+    width: 100px;
+    height: 40px;
+    margin-left: 100px;
+    background: rgb(153, 173, 36);
+    border: 2px solid rgb(214, 32, 32);
+    border-radius: 15px;
 }

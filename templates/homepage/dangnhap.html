@@ -16,7 +16,9 @@
 </div>  
 
 -->
-        <form method="POST">
+
+    <center>
+        <form method="POST" id="form_dangNhap">
             {% csrf_token %}
             {% for key,value in form.errors.items %}
                 {{value}}
@@ -24,9 +26,9 @@
             <p><label>Tài Khoản :</label>{{form.username}}</p>
             <p><label>Mật Khẩu :</label>{{form.password}}</p>
             <input type="hidden" name="next" value="/"/>
-            <input type="submit" value="Đăng Nhập" />
+            <input type="submit" value="Đăng Nhập" id="btn_dangNhap"/>
         </form>
-
+    <center>
         
 
 {% endblock %}

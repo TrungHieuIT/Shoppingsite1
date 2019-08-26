@@ -17,7 +17,14 @@ class HomeView(View):
     
     
     
-
+def quickView(request,id):
+    listCategory = Category.objects.all()
+    productcate = Product.objects.filter(pro_id = id)
+    detail = Product.objects.get(pro_id = id)
+    detailBrand = Brand.objects.all()
+    otherPro = Product.objects.filter(cate_id = detail.cate_id)
+    context = {'productcate' : productcate,'listscan' :listCategory,'detail' :detail ,'detailBrand' :detailBrand ,'otherPro':otherPro}
+    return render(request,'homepage/quickView.html',context=context)
 
 #def dangky(request):
     #return render(request,'homepage/dangky.html')
@@ -35,7 +42,6 @@ def detail(request,id):
     detailBrand = Brand.objects.all()
     otherPro = Product.objects.filter(cate_id = detail.cate_id)
     context = {'productcate' : productcate,'listscan' :listCategory,'detail' :detail ,'detailBrand' :detailBrand ,'otherPro':otherPro}
-
     return render(request,'homepage/chiTietSanPham.html',context=context)
 
 

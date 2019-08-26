@@ -1390,8 +1390,14 @@ select option
 
 .deals_featured
 {
+	min-height: 500px; 
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	background: #afaf0763;
 	width: 100%;
+	height: 100%; 
 }
 
 /*********************************
@@ -2220,7 +2226,7 @@ select option
 }
 .banner_2_content
 {
-	padding-top: 145px;
+	padding-top: 10px;
 }
 .banner_2_image_container
 {
@@ -2230,6 +2236,16 @@ select option
 .owl-carousel .owl-item img {
   
 }
+
+
+.parallax_img_hot{
+	background-image:url ("{% static 'homepage/images/bannerproduct/note102.jpg' %}");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
 .deals_image_hot img{
 	display: block;
 	height: 300px;
@@ -2256,6 +2272,7 @@ select option
 .banner_2_image img
 {
 	width: 100%;
+	
 }
 .banner_2_category
 {

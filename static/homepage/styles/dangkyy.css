@@ -58,3 +58,50 @@ input#submit:hover{
  
     background: linear-gradient(to right, #050505, #3f5efb); 
 }
+
+/*--------------
+        phan quickView 
+-------------------*/
+.modal_quickView{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+#form_dangKy{
+    background: rgb(61, 163, 163);
+    color: cornsilk;
+    padding: 55px;
+    width: 500px;
+
+}
+#btn_dangKy{
+    width: 100px;
+    height: 40px;
+    margin-left: 100px;
+    background: rgb(153, 173, 36);
+    border: 2px solid rgb(214, 32, 32);
+    border-radius: 15px;
+}
+input#id_username{
+    width: 250px;
+    margin-left: 54px;
+}
+input#id_email{
+    width: 250px;
+    margin-left: 82px;
+}
+input#id_password1{
+    width: 250px;
+    margin-left: 63px;
+}
+input#id_password2{
+    width: 250px;
+    margin-left: 10px;
+}
+
