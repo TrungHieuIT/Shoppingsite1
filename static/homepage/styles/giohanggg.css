@@ -24,14 +24,12 @@
     margin-top: 10px;
 }
 .action-wrap{
-
     width: auto;
     height: 330px;
     background: #adb17e;
     border-radius: 10px;
 }
 .tongQuanThanhToan{
-  
     padding: 25px;
 }
 .bt_btnthanhtoan{
@@ -53,10 +51,38 @@
     width: 360px;
     border-radius: 10px;
 }
-
-
+.remove_chiTiet_inPut{
+    width:350px;
+    
+    top:70%;
+}
 .cart_soLuong_inPut{
-    position: absolute;
-    top: 80%;
-    left: 80%;
+    float: right;
+}
+.cart_soLuong_inPut p{
+    margin-top: 5px;
+}
+.btn_remove_xemChiTiet{
+    float: left;
+    background: rgb(18, 40, 243);
+    border-radius: 5px;
+    width: 100px;
+    padding: 0px;
+    border: 1px solid;
+    color: aliceblue;
+}
+.btn_remove_xemChiTiet p{
+    margin: 8px;
+}
+.btn_remove_gioHang{
+    margin-left:10px; 
+    background: rgb(255, 8, 8);
+    border-radius: 5px;
+    width: 100px;
+    padding: 0px;
+    border: 1px solid;
+    color: aliceblue;
+}
+.btn_remove_gioHang p{
+    margin: 8px;
 }
