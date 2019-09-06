@@ -118,19 +118,11 @@
 										<a href="#">Thương Hiệu Nổi Bật<i class="fas fa-chevron-down"></i></a>
 
 										<ul >
+											{% for item in brand %}
 											<li>
-												<a href="#">Apple<i class="fas fa-chevron-down"></i></a>
-												<ul>
-													<li><a href="#">Iphone<i class="fas fa-chevron-down"></i></a></li>
-													<li><a href="#">Ipad<i class="fas fa-chevron-down"></i></a></li>
-													<li><a href="#">MacBook<i class="fas fa-chevron-down"></i></a></li>
-												</ul>
+												<a href="#">{{item.brand_name}}<i class="fas fa-chevron-down"></i></a>
 											</li>
-											<li><a href="#">SamSung<i class="fas fa-chevron-down"></i></a></li>
-											<li><a href="#">Oppo<i class="fas fa-chevron-down"></i></a></li>
-											<li><a href="#">Xiaomi<i class="fas fa-chevron-down"></i></a></li>
-											<li><a href="#">Sony<i class="fas fa-chevron-down"></i></a></li>
-											<li><a href="#">Canon<i class="fas fa-chevron-down"></i></a></li>
+											{% endfor %}
 										</ul>
 
 									</li>
@@ -179,9 +171,9 @@
 									<a href="#">Thương Hiệu Nỗi Bật<i class="fa fa-angle-down"></i></a>
 									<ul class="page_menu_selection">
 										<li class="page_menu_item has-children">
-											<a href="#">Apple<i class="fa fa-angle-down"></i></a>
-											<a href="#">SamSung<i class="fa fa-angle-down"></i></a>
-											<a href="#">Oppo<i class="fa fa-angle-down"></i></a>
+											{% for item in brand%}
+											<a href="#">{{item.brand_name}}<i class="fa fa-angle-down"></i></a>
+											{% endfor %}
 										</li>
 									</ul>
 								</li>

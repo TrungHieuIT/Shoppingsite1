@@ -2,150 +2,74 @@
 {% load static %}
 {% block mainWeb %}
 
-<div class="cart-page-product">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-md-8"> <!--  1 card-body bat dau o day -->
-                <article class="card card-product">
-                <div class="card-body" id="card_body_gioHang">
-                        <div class="row">
-                            <aside class="col-lg-3">
-                                <div class="img-wrap"><img src="{% static 'homepage/images/phone/6s.png' %}" alt=""></div>
-                            </aside> 
-                            <article class="col-lg-3">
-                                <h4 class="title"> MacBook </h4>
-                                <p>100000</p>                        
-                            </article>
-                            <article class="col-lg-2">
-                                    <div class="remove_chiTiet_inPut">
-                                            <div class="cart_soLuong_inPut">
-                                                <span>Số Lượng </span>
-                                                <input id="quantity_input" type="number"  value="1" max="10" min="0"> 
-                                            </div>
-                                            <button class="btn_remove_xemChiTiet">            
-                                                    <p>Xem Chi Tiết</p>
-                                            </button> 
-                                            <button class="btn_remove_gioHang">                
-                                                <p>Xóa</p>      
-                                            </button> 
-                                    </div>                               
-                            </article>    
-                        </div>
-                </div> <!-- cua card body -->
-                </article>   
-            </div>   <!--  1 card-body ket thuc o day -->
-
-            <div class="col-lg-8 col-md-8"> <!--  1 card-body bat dau o day -->
-                <article class="card card-product">
-                <div class="card-body">
-                        <div class="row">
-                            <aside class="col-lg-3">
-                                <div class="img-wrap"><img src="{% static 'homepage/images/phone/6s.png' %}" alt=""></div>
-                            </aside> 
-                            <article class="col-lg-3">
-                                <h4 class="title"> MacBook </h4>
-                                <p>100000</p>                        
-                            </article>
-                            <article class="col-lg-2">
-                                    <div class="remove_chiTiet_inPut">
-                                            <div class="cart_soLuong_inPut">
-                                                <span>Số Lượng </span>
-                                                <input id="quantity_input" type="number"  value="1" max="10" min="0"> 
-                                            </div>
-                                            <button class="btn_remove_xemChiTiet">            
-                                                    <p>Xem Chi Tiết</p>
-                                            </button> 
-                                            <button class="btn_remove_gioHang">                
-                                                <p>Xóa</p>      
-                                            </button> 
-                                    </div>                               
-                            </article>    
-                        </div>
-                </div>
-                </article>   
-            </div>   <!--  1 card-body ket thuc o day -->
-
-            <div class="col-lg-8 col-md-8"> <!--  1 card-body bat dau o day -->
-                <article class="card card-product">
-                <div class="card-body">
-                        <div class="row">
-                            <aside class="col-lg-3">
-                                <div class="img-wrap"><img src="{% static 'homepage/images/phone/6s.png' %}" alt=""></div>
-                            </aside> 
-                            <article class="col-lg-3">
-                                <h4 class="title"> MacBook </h4>
-                                <p>100000</p>                        
-                            </article>
-                            <article class="col-lg-2">
-                                    <div class="remove_chiTiet_inPut">
-                                            <div class="cart_soLuong_inPut">
-                                                <span>Số Lượng </span>
-                                                <input id="quantity_input" type="number"  value="1" max="10" min="0"> 
-                                            </div>
-                                            <button class="btn_remove_xemChiTiet">            
-                                                    <p>Xem Chi Tiết</p>
-                                            </button> 
-                                            <button class="btn_remove_gioHang">                
-                                                <p>Xóa</p>      
-                                            </button> 
-                                    </div>                               
-                            </article>    
-                        </div>
-                </div>
-                </article>   
-            </div>   <!--  1 card-body ket thuc o day -->
-
-            <div class="col-lg-8 col-md-8"> <!--  1 card-body bat dau o day -->
-                <article class="card card-product">
-                <div class="card-body">
-                        <div class="row">
-                            <aside class="col-lg-3">
-                                <div class="img-wrap"><img src="{% static 'homepage/images/phone/6s.png' %}" alt=""></div>
-                            </aside> 
-                            <article class="col-lg-3">
-                                <h4 class="title"> MacBook </h4>
-                                <p>100000</p>                        
-                            </article>
-                            <article class="col-lg-2">
-                                    <div class="remove_chiTiet_inPut">
-                                            <div class="cart_soLuong_inPut">
-                                                <span>Số Lượng </span>
-                                                <input id="quantity_input" type="number"  value="1" max="10" min="0"> 
-                                            </div>
-                                            <button class="btn_remove_xemChiTiet">            
-                                                    <p>Xem Chi Tiết</p>
-                                            </button> 
-                                            <button class="btn_remove_gioHang">                
-                                                <p>Xóa</p>      
-                                            </button> 
-                                    </div>                               
-                            </article>    
-                        </div>
-                </div>
-                </article>   
-            </div>   <!--  1 card-body ket thuc o day -->
-
-            <div class="col-lg-4">
-                <div class="action-wrap">
-                    <div class="tongQuanThanhToan">
-                    <h6>Tổng quan thanh toán</h6>
-                    <p class="text-success">Tổng giá sản phẫm</p>
-                    <p class="text-success">Phí vận chuyển</p>
-                    <p class="text-success">VAT :</p>
-                    <p class="text-success">Tổng tiền</p>
-                </div>
-                    <br>
-                    <p class="bt_btnthanhtoan">
-                        <a href="#" id="tienHanhThanhToan" class="btn btn-primary">Tiến hành thanh toán </a>
-                        <a href="#" id="thanhToanQuaThe" class="btn btn-primary">Thanh toán qua thẻ </a>
-                        <a href="#" id="quayLaiMuaHang" class="btn btn-primary">Quay lại mua hàng </a>
-                    </p>
-                </div> 
-            </div> 
-     
-        </div>
+<div class="container">
+        <div class="row" style="margin-top: 6%">
+        <h2>Your Shopping Cart
+            <span class="badge pull-right">
+                {% with totail_items=cart|length %}
+                    {% if cart|length > 0 %}
+                        My Shopping Order:
+                        <a href="{% url 'cart:cart_detail' %}" style="color: #ffffff">
+                            {{ totail_items }} item {{ totail_items|pluralize }}, Kshs. {{ cart.get_total_price }}
+                        </a>
+                        {% else %}
+                        Your cart is empty.
+                    {% endif %}
+                {% endwith %}
+            </span>
+        </h2>
+            <table class="table table-striped table-hover">
+                <thead style="background-color: #5AC8FA">
+                    <tr>
+                        <th>Image</th>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Remove</th>
+                        <th>Unit Price</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for item in cart %}
+                    {% with product=item.product  %}
+                        <tr>
+                            <td>
+                                <a href="{{ product.get__absolute_url }}">
+                                    <img src="{% static 'media/'%}{{product.pro_image}}" alt="..." style="height: 130px; width: auto">
+                                </a>
+                            </td>
+                            <td>{{ product.name }}</td>
+                            <td>
+                                <form action="{% url 'cart:cart_add' product.id %}" method="post">
+                                    {% csrf_token %}
+                                    {{ item.update_quantity_form.quantity }}
+                                    {{ item.update_quantity_form.update }}
+                                    <input type="submit" value="Update" class="btn btn-info">
+                                </form>
+                            </td>
+                            <td>
+                                <a href="{% url 'cart:cart_remove' product.id %}">Remove</a>
+                            </td>
+                            <td>kshs. {{ item.price }}</td>
+                            <td>kshs. {{ item.total_price }}</td>
+                        </tr>
+                    {% endwith %}
+                {% endfor %}
+                <tr style="background-color: #5AC8FA">
+                    <td><b>Total</b></td>
+                    <td colspan="4"></td>
+                    <td colspan="num"><b>kshs. {{ cart.get_total_price }}</b></td>
+                </tr>
+                </tbody>
+            </table>
+        <p class="text-right">
+            <a href="#" class="btn btn-default">Continue Shopping</a>
+            <a href="" class="btn btn-primary">Checkout</a>
+        </p>
         </div>
     </div>
+
+
 
 {% include 'homepage/sanPhamLienQuan.html' %}
 {% endblock %}
