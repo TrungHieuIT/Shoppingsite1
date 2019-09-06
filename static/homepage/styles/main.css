@@ -3833,3 +3833,20 @@ select option
 {
 	margin-right: 0px;
 }
+
+#td_GioHang:hover {
+	background: #bfcfda;
+}
+.table_gioHang_left{
+	
+}
+#gioHang_ThanhToan_right{
+	margin-top:55px;
+	background: #d4b663;
+	height: 245px;
+	
+	border-radius:15px;
+}
+.ThanhToan{
+	margin-left: 10px;
+}
