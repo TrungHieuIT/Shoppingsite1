@@ -47,6 +47,7 @@ class Product (models.Model):
     pro_year = models.CharField(max_length = 4)
     brand_id = models.ForeignKey(Brand , on_delete = models.CASCADE) 
     status = models.SmallIntegerField(choices = statusChoice)
+    vote = models.IntegerField(default=0)
     
     class Meta:
         ordering = ('pro_name', )

@@ -55,14 +55,27 @@
 							<!-- Cart -->
 							<div class="cart">
 								<div class="cart_container d-flex flex-row align-items-center justify-content-end">
+									{% with totail_items=cart|length %}
+										{% if cart|length > 0 %}
 									<div class="cart_icon">
 										<img src="{% static 'homepage/images/icon/cart.png' %}" alt="">
-										<div class="cart_count"><span>10</span></div>
+										<div class="cart_count"><span>{{ totail_items }}</span></div>
 									</div>
 									<div class="cart_content">
-										<div class="cart_text"><a href="/giohang/">Giỏ Hàng</a></div>
-										<div class="cart_price" >$85</div>
+										<div class="cart_text"><a href="{% url 'cart:cart_detail' %}">Giỏ Hàng</a></div>
+										<div class="cart_price" >{{ cart.get_total_price }} VNĐ</div>
 									</div>
+										{% else %}
+										<div class="cart_icon">
+											<img src="{% static 'homepage/images/icon/cart.png' %}" alt="">
+											<div class="cart_count"><span>0</span></div>
+										</div>
+										<div class="cart_content">
+											<div class="cart_text"><a href="{% url 'cart:cart_detail' %}">Giỏ Hàng</a></div>
+											<div class="cart_price" >0VNĐ</div>
+										</div>
+										{% endif %}
+									{% endwith %}
 								</div>
 							</div>
 						</div>

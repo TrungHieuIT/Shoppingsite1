@@ -4,36 +4,6 @@ from .models import Product,Category,Brand
 from cart.forms import CartAddProductForm
 # Create your views here.
 
-#class HomeView(View):
-    #def get(self,request):
-        #list = Product.objects.all().order_by('-pro_id')
-        #listCategory = Category.objects.all()
-        #brand = Brand.objects.all()
-        #context = {'listscan' : listCategory,'listProduct' : list,'brand':brand}
-        #return render(request,'homepage/index.html', context=context)
-
-   
-    
-    
-    
-#def quickView(request,id):
-    #listCategory = Category.objects.all()
-    #productcate = Product.objects.filter(pro_id = id)
-    #detail = Product.objects.get(pro_id = id)
-    #detailBrand = Brand.objects.all()
-    #otherPro = Product.objects.filter(cate_id = detail.cate_id)
-    #context = {'productcate' : productcate,'listscan' :listCategory,'detail' :detail ,'detailBrand' :detailBrand ,'otherPro':otherPro}
-    #return render(request,'homepage/quickView.html',context=context)
-
-#def dangky(request):
-    #return render(request,'homepage/dangky.html')
-
-#def dangnhap(request):
-    #return render(request,'homepage/dangnhap.html')
-
-#def cart(request):
-    #return render(request,'homepage/giohang.html')
-
 def chiTietSanPham(request,id):
     listCategory = Category.objects.all()
     productcate = Product.objects.filter(id = id)
@@ -57,6 +27,7 @@ def index (request,category_slug = None):
        categories = Category.objects.all()
        brand = Brand.objects.all()
        products = Product.objects.all().order_by('-id')
+       products_vote = Product.objects.filter().order_by('-vote')
        if category_slug:
            category = get_object_or_404(Category,slug=category_slug)
            products = Product.objects.filter(category=category)
@@ -66,5 +37,6 @@ def index (request,category_slug = None):
            'category' : category,
            'products' : products,
            'brand' : brand,
+           'vote' : products_vote,
         }
        return render(request,'homepage/index.html',context = context)

@@ -7,20 +7,6 @@
     <div class="table_gioHang_left">
         <div class="row" style="margin-top: 6%">
             <div class="col-md-8">
-            <h2>
-                <span class="badge pull-right">
-                    {% with totail_items=cart|length %}
-                        {% if cart|length > 0 %}
-                            Giỏ Hàng Của Bạn
-                            <a href="{% url 'cart:cart_detail' %}" style="color: #ffffff">
-                                {{ totail_items }} item {{ totail_items|pluralize }}, Kshs. {{ cart.get_total_price }}
-                            </a>
-                            {% else %}
-                        Giỏ Hàng Rỗng
-                        {% endif %}
-                    {% endwith %}
-                </span>
-            </h2>
             <table class="table table-striped table-hover">
                 <thead style="background-color: rgb(211, 233, 17)">
                     <tr>
@@ -68,10 +54,10 @@
             </div>
             <div class="col-md-4" id="gioHang_ThanhToan_right">
                 <h2>Thông Tin Giỏ Hàng</h2>
-                <p>Giá Tiền : <b>{{ cart.get_total_price }}</b></p>
-                <p>Thuế : </p>
-                <p>Phí Vận Chuyển : </p>
-                <p>Tổng tiền phải trả :</p>
+                <p>Giá Tiền : <b>{{ cart.get_total_price }} VNĐ</b></p>
+                <p>Số lượng : {{cart.quantity}}</p>
+                <p>Phí Vận Chuyển(Tạm tính) : <b>0 VNĐ</b> </p>
+                <p>Tổng tiền phải trả : <b>{{ cart.get_total_price }} VNĐ</b></p>
                 <div class="ThanhToan">
                     <input type="submit" value="Tiếp tục mua sắm" class="btn btn-info">
                     <input type="submit" value="Tiến Hành Thanh Toán" class="btn btn-info">
