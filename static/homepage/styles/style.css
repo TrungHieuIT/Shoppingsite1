@@ -1706,7 +1706,7 @@ select option
 }
 .featured_slider
 {
-	width: 100%;
+	width: 1200px;
 }
 .featured_slider .slick-list
 {
@@ -1743,7 +1743,10 @@ select option
     
 }
 .product_item:hover{
-	background: rgb(93, 116, 41);
+	background: rgb(150, 182, 76);
+	border-radius: 35px;
+	width: 250px;
+	height: 29	0px;
 }
 .product_item:hover .overlay{
 	opacity: 2;
@@ -1788,10 +1791,14 @@ select option
 	box-shadow: 0px 5px 25px rgba(0,0,0,0.1);
 	z-index: 10;
 }
+.image_SPCT{
+	width: 150px;
+	height: 150px;
+}
 .product_image
 {
-	width: 95%;
-	height: 115px;
+	width: 190px;
+	
 }
 .product_image img
 {
@@ -1949,6 +1956,7 @@ select option
 	-o-transform: translateX(-50%);
 	transform: translateX(-50%);
 	bottom: 100px;
+	margin-bottom: -35px;
 }
 .featured_slider .slick-slide
 {

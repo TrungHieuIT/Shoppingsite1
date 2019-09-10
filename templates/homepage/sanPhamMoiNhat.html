@@ -1,0 +1,88 @@
+ {% load static %}
+<section class="main-content-section-full-column">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-xs-12">
+                <!-- FEATURED-PRODUCTS-AREA START -->
+
+                <div class="featured-products-area">
+
+                    <div class="left-title-area">
+                        <h2 class="left-title">Sản Phẩm Mới Nhất</h2>
+                    </div>
+
+                    <div class="row">
+                        <!-- FEARTURED-CAROUSEL START -->
+
+                        <div class="feartured-carousel">
+                            <!-- SINGLE ITEM START -->
+                            {% for item in products %}
+                            <div class="item">
+                                <!-- SINGLE-PRODUCT-ITEM START -->
+
+                                <div class="single-product-item">
+                                    <a href="/chiTietSanPham/{{item.id}}">
+                                        <div class="product-image">
+                                            <img class="image_SPCT" src="{% static 'media/'%}{{item.pro_image}}" alt="{{item.pro_name}}">
+
+                                            <div class="overlay-content">
+                                                <ul>
+                                                    <li><a href="#" title="Quick view"><i class="fa fa-search"></i></a></li>
+                                                    <li><a href="#" title="Quick view"><i class="fa fa-shopping-cart"></i></a></li>
+                                                    <li><a href="#" title="Quick view"><i class="fa fa-retweet"></i></a></li>
+                                                    <li><a href="#" title="Quick view"><i class="fa fa-heart-o"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="product-info">
+                                            <a href="#">{{item.pro_name}}</a>
+                                            <div class="price-box">
+                                                <span class="price">{{item.price}}VND</span>
+                                            </div>
+                                        </div>
+                                </div>
+
+                                <!-- SINGLE-PRODUCT-ITEM END -->
+                                <!-- SINGLE-PRODUCT-ITEM START -->
+
+                                <div class="single-product-item">
+                                    <a href="/chiTietSanPham/{{item.id}}">
+                                        <div class="product-image">
+                                            <img class="image_SPCT" src="{% static 'media/'%}{{item.pro_image}}" alt="{{item.pro_name}}">
+
+                                            <div class="overlay-content">
+                                                <ul>
+                                                    <li><a href="#" title="Quick view"><i class="fa fa-search"></i></a></li>
+                                                    <li><a href="#" title="Quick view"><i class="fa fa-shopping-cart"></i></a></li>
+                                                    <li><a href="#" title="Quick view"><i class="fa fa-retweet"></i></a></li>
+                                                    <li><a href="#" title="Quick view"><i class="fa fa-heart-o"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="product-info">
+                                            <a href="single-product.html">Printed Summer Dress</a>
+                                            <div class="price-box">
+                                                <span class="price">$30.50</span>
+                                            </div>
+                                        </div>
+                                </div>
+
+                                <!-- SINGLE-PRODUCT-ITEM END -->
+                            </div>
+                            {% endfor %}
+                            <!-- SINGLE ITEM END -->
+                        </div>
+
+                        <!-- FEARTURED-CAROUSEL END -->
+                    </div>
+
+                </div>
+
+                <!-- FEATURED-PRODUCTS-AREA END -->
+            </div>
+
+        </div>
+
+    </div>
+</section>
