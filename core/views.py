@@ -1,4 +1,4 @@
-from django.shortcuts import render,get_object_or_404
+from django.shortcuts import render,get_object_or_404,redirect
 from django.http import HttpResponse,HttpResponseRedirect
 from .models import Product,Category,Brand
 from cart.forms import CartAddProductForm
@@ -49,3 +49,9 @@ def productCate (request,id):
         'listscan' : listCategory,
     }
     return render(request,'homepage/sanPhamDanhMuc.html',context)
+
+def upvote (request , id):
+    productVote = Product.objects.get(id = id )
+    productVote.vote +=1
+    productVote.save()
+    return redirect('core:index')
