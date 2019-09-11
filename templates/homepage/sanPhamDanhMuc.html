@@ -9,7 +9,7 @@
         <div class="row padding">
         {% for item in productcate %}
             <div class="col-md-3">
-            <a href="/chiTietSanPham/{{item.pro_id}}">
+            <a href="/chiTietSanPham/{{item.id}}">
                 <div class="card" id="card_details">
                         <div class="inner">
                             <img class="card-img-top" src= "{% static 'media/' %}{{item.pro_image}}"  alt="">
@@ -27,7 +27,7 @@
                         </div>
                         <div class="card-body">
                         <h4 class="card-title">{{item.pro_name}}</h4>
-                        <p class="card-text">{{item.pro_price}} VND</p>
+                        <p class="card-text">{{item.price}} VND</p>
             
                     </div>
                 </div>

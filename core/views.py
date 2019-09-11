@@ -40,3 +40,12 @@ def index (request,category_slug = None):
            'vote' : products_vote,
         }
        return render(request,'homepage/index.html',context = context)
+
+def productCate (request,id):
+    listCategory = Category.objects.all()
+    productcate = Product.objects.filter(cate_id = id)
+    context ={
+        'productcate' : productcate,
+        'listscan' : listCategory,
+    }
+    return render(request,'homepage/sanPhamDanhMuc.html',context)
