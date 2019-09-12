@@ -27,8 +27,14 @@
 						<div class="header_search">
 							<div class="header_search_content">
 								<div class="header_search_form_container">
-									<form action="#" class="header_search_form clearfix">
-										<input type="search" required="required" class="header_search_input" placeholder="Tìm Kiếm Sản Phẩm.........">
+									<form action="{% url 'core:search_results' %}" class="header_search_form clearfix">
+										<input 
+										name ="search"
+										type="search" 
+										required="required" 
+										class="header_search_input" 
+										placeholder="Tìm Kiếm Sản Phẩm.........">
+										
 										<div class="custom_dropdown">
 											<div class="custom_dropdown_list">
 												<span class="custom_dropdown_placeholder clc">Tất Cả Sản Phẩm</span>

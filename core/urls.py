@@ -1,7 +1,7 @@
 from django.urls import path
 from django.conf.urls import url
-#from .views import HomeView
-from . import views
+from .views import SearchResultsView
+from . import views 
 
 app_name ='core'
 urlpatterns = [
@@ -15,5 +15,6 @@ urlpatterns = [
     path('',views.index ,name='index'),
     path('chiTietSanPham/<int:id>/',views.chiTietSanPham,name="chi-tiet-san-pham"),
     path('upvote/<int:id>',views.upvote, name ='up vote'),
-
+    path('search/', SearchResultsView.as_view(), name='search_results'),
+    
 ]

@@ -3,11 +3,10 @@
 
 {% block mainWeb %}
 
-<div class="h1_title"><h1>{{listscan.cate_name}}</h1></div>
 
 <div class="container-fluid padding">
         <div class="row padding">
-        {% for item in productcate %}
+        {% for item in object_list %}
             <div class="col-md-3">
             <a href="/chiTietSanPham/{{item.id}}">
                 <div class="card" id="card_details">

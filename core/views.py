@@ -2,6 +2,9 @@ from django.shortcuts import render,get_object_or_404,redirect
 from django.http import HttpResponse,HttpResponseRedirect
 from .models import Product,Category,Brand
 from cart.forms import CartAddProductForm
+from django.views.generic.list import ListView
+from django.db.models import Q
+from django.contrib.postgres.search import SearchQuery, SearchRank,SearchVector
 # Create your views here.
 
 def chiTietSanPham(request,id):
@@ -31,6 +34,7 @@ def index (request,category_slug = None):
        if category_slug:
            category = get_object_or_404(Category,slug=category_slug)
            products = Product.objects.filter(category=category)
+
        
        context ={
            'listscan': categories,
@@ -55,3 +59,18 @@ def upvote (request , id):
     productVote.vote +=1
     productVote.save()
     return redirect('core:index')
+
+class SearchResultsView(ListView):
+    model = Product
+    template_name ='homepage/search.html'
+    
+    def get_queryset(self):
+        query = self.request.GET.get('search')
+        object_list = Product.objects.filter(
+            Q(pro_name__icontains = query) | Q(price__icontains = query ) | Q(pro_year__icontains = query) | Q(slug__icontains = query)
+        )
+
+        return object_list
+        
+    
+    
