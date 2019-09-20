@@ -15,8 +15,10 @@
                     <div class="row">
                         <!-- FEARTURED-CAROUSEL START -->
 
-                        <div class="feartured-carousel">
+                        <div class="feartured-carousel ">
                             <!-- SINGLE ITEM START -->
+                            {% comment %} {% mkrange [start,] stop[, step] as context_name %}
+                            {% mkrange 0 20 2 as products %} {% endcomment %}
                             {% for item in products %}
                             <div class="item">
                                 <!-- SINGLE-PRODUCT-ITEM START -->
@@ -46,27 +48,7 @@
                                 <!-- SINGLE-PRODUCT-ITEM END -->
                                 <!-- SINGLE-PRODUCT-ITEM START -->
 
-                                <div class="single-product-item">
-                                    <a href="/chiTietSanPham/{{item.id}}">
-                                        <div class="product-image">
-                                            <img class="image_SPCT" src="{% static 'media/'%}{{item.pro_image}}" alt="{{item.pro_name}}">
-
-                                            <div class="overlay-content">
-                                                <ul>
-                                                    <li><a href="#" title="Quick view"><i class="fa fa-search"></i></a></li>
-                                                    <li><a href="#" title="Quick view"><i class="fa fa-shopping-cart"></i></a></li>
-                                                    <li><a href="#" title="Quick view"><i class="fa fa-retweet"></i></a></li>
-                                                    <li><a href="upvote/{{item.id}}" title="Quick view"><i class="fa fa-heart-o"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="product-info">
-                                            <a href="single-product.html">Printed Summer Dress</a>
-                                            <div class="price-box">
-                                                <span class="price">$30.50</span>
-                                            </div>
-                                        </div>
-                                </div>
+                        
 
                                 <!-- SINGLE-PRODUCT-ITEM END -->
                             </div>

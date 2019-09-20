@@ -1,17 +1,15 @@
 from django.db import models
 from core.models import Product
+from accounts.models import CustomerUser
 # Create your models here.
 
 class Order(models.Model):
-    first_name = models.CharField(max_length =60)
-    last_name = models.CharField(max_length=60)
-    email = models.EmailField()
-    phone = models.CharField(max_length =11)
-    address = models.CharField(max_length=150)
-    city = models.CharField(max_length=100)
+    user = models.ForeignKey(CustomerUser, on_delete=models.CASCADE)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
-    paid = models.BooleanField(default=False) 
+    paid = models.BooleanField(default=False, help_text="") 
+    # user = models.ForeignKey(User, null) #nguo7i2 ban1
+
 
     class Meta:
         ordering = ('-created', )

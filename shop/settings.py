@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'paypal.standard.ipn',
     
 ]
 
@@ -134,7 +135,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'static')
 ]
-#AUTH_USER_MODEL = 'core.CustomerUser'
+AUTH_USER_MODEL = 'accounts.CustomerUser'
 
 STATIC_URL = '/static/'
 VENV_PATH = os.path.dirname(BASE_DIR)
@@ -149,3 +150,4 @@ AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend',
 )
 SITE_ID = 1
+PAYPAL_TEST = True

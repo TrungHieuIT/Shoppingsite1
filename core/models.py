@@ -1,8 +1,9 @@
 from django.db import models
 from django.urls import reverse
+
 # Create your models here.
 
-statusChoice = ((1,'Hien thi'),(0 , 'An'))
+statusChoice = ((1,'Hoạt động'),(0 , 'Không hoạt động'))
 
 class Category(models.Model):
     cate_name = models.CharField(max_length=150, db_index=True)
@@ -36,7 +37,7 @@ class Brand (models.Model):
 
 
 class Product (models.Model):
-    cate_id = models.ForeignKey(Category, related_name='products', on_delete=models.CASCADE)
+    cate = models.ForeignKey(Category, related_name='products', on_delete=models.CASCADE)
     pro_name = models.CharField(max_length=150, db_index=True)
     slug = models.SlugField(max_length=100, db_index=True)
     description = models.TextField(blank = True)
@@ -45,7 +46,7 @@ class Product (models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     pro_image = models.ImageField(max_length = 255, null = False)
     pro_year = models.CharField(max_length = 4)
-    brand_id = models.ForeignKey(Brand , on_delete = models.CASCADE) 
+    brand = models.ForeignKey(Brand , on_delete = models.CASCADE) 
     status = models.SmallIntegerField(choices = statusChoice)
     vote = models.IntegerField(default=0)
     
@@ -61,7 +62,4 @@ class Product (models.Model):
         return reverse('core:product_detail', args=[self.id,self.slug])
     
     
-
-
-
 

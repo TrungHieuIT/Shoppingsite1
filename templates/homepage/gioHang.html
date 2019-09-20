@@ -59,8 +59,13 @@
                 <p>Phí Vận Chuyển(Tạm tính) : <b>0 VNĐ</b> </p>
                 <p>Tổng tiền phải trả : <b>{{ cart.get_total_price }} VNĐ</b></p>
                 <div class="ThanhToan">
-                    <input type="submit" value="Tiếp tục mua sắm" class="btn btn-info">
-                    <input type="submit" value="Tiến Hành Thanh Toán" class="btn btn-info">
+                    <form action="{% url 'core:index' %}" method="get">
+                            <input type="submit" value="Tiếp tục mua sắm" class="btn btn-info">
+                    </form>
+                    
+                     <form action="{% url 'orders:order_create' %}" method="get">
+                        <input type="submit" value="Tiến Hành Thanh Toán" class="btn btn-info">
+                    </form>
                  </div>  
 
             </div>

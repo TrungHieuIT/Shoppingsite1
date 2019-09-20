@@ -21,9 +21,14 @@
                             <button type="button" class="btn btn-secondary" title="Đánh dấu">
                                     <i class="fa fa-heart"></i>
                             </button>
-                            <button type="button" class="btn btn-secondary" title="Xem chi tiet">
+                            <form action="{% url 'cart:cart_add' item.id %}" method="post">
+				                {% csrf_token %}
+				                {{ cart_product_form }}
+				                <button type="button" class="btn btn-secondary" title="Giỏ hàng">
                                     <i class="fa fa-shopping-cart"></i>
-                            </button>
+                                </button>
+                            </form>
+                           
                         </div>
                         <div class="card-body">
                         <h4 class="card-title">{{item.pro_name}}</h4>
