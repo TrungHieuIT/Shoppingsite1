@@ -7,4 +7,6 @@ class CustomerUser(AbstractUser):
     address = models.CharField(default='',max_length=200)
     city =  models.CharField(default='',max_length=100)
 
+    def __str__(self):
+        return self.email
 

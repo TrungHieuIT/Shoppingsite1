@@ -3,16 +3,25 @@
 
 {% block mainWeb %}
 
- 
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+<h2>Sign up</h2>
+<form class="site-form" action ="/accounts/signup" method="POST">
+  {% csrf_token %}
+  {{form}}
+  <input type ="submit" value ="Signup"
+</form>
+{% endblock %}
             
-            <center>
+            {% comment %} <center>
             <form action='.' method='POST' id="form_dangKy">
                 {% csrf_token %}
                 {{form.as_p}}
                 <input type="submit" value="Đăng Ký" id="btn_dangKy">
                  
             </form>
-            </center>
+            </center> {% endcomment %}
 
 
  

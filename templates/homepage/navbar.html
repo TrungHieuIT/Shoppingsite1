@@ -89,11 +89,16 @@
 
 
 					<div class="col-lg-2 col-9 order-lg-3 order-2 text-lg-left text-right">
-						{% if user.username %}
+						{% if user.is_authenticated %}
 							<p>Xin chào {{user.username}}</p>
-							<p><a id="btnDangXuat" href="{% url 'logout' %}">Đăng Xuất </a></p>
+							<p>
+								<form class="logout-link" action= "{% url 'logout' %}" method="POST" >
+								{% csrf_token %}
+								<button type ="submit">Đăng Xuất</button>
+								</form>
+							</p>
 							{% else %}
-							<p id="areaDkDn" ><a id="btnDangKy" href="{% url 'register' %}" >Đăng Ký | </a>
+							<p id="areaDkDn" ><a id="btnDangKy" href="{% url 'login' %}" >Đăng Ký | </a>
 								<a id="btnDangNhap" href="{% url 'login' %}">Đăng Nhập</a>
 							</p>
 						{% endif %}

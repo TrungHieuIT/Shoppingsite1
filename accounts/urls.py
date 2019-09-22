@@ -1,9 +1,8 @@
 from django.urls import path
-from . import views
-from django.contrib.auth import views as auth_views
+from .import views
+from django.views.generic.base import TemplateView
 urlpatterns = [
-    path('register/',views.dangky,name="register"),
-    #path('login/', auth_views.login, {'template_name': 'homepage/dangnhap.html'},name="dangnhap"),
-    path( 'login/',auth_views.LoginView.as_view(template_name="homepage/dangnhap.html"), name="login"),
-    path('logout/',auth_views.LogoutView.as_view(next_page='/'),name='logout'),
+    path('signup/', views.SignUpView, name='signup'),
+    path('login/',views.LoginView,name="login"),
+    path('logout/',views.LogoutView,name="logout"),
 ]
