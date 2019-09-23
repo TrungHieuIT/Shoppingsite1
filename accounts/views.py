@@ -21,7 +21,10 @@ def LoginView(request):
         if form.is_valid():
             user =form.get_user()
             login(request,user)
-            return redirect('core:index')
+            if 'next' in request.POST:
+                return redirect(request.POST.get('next'))
+            else:
+                return redirect('core:index')
     else:
         form = AuthenticationForm()
     return render(request,'homepage/login.html',{'form':form})    

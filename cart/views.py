@@ -4,6 +4,7 @@ from core.models import Product
 from .cart import Cart
 from .forms import CartAddProductForm
 from accounts.models import CustomerUser
+from django.contrib.auth.decorators import login_required
 
 @require_POST
 def cart_add(request, id):
@@ -22,7 +23,7 @@ def cart_remove(request, id):
     cart.remove(product)
     return redirect('cart:cart_detail')
 
-
+@login_required(login_url="/accounts/login/")
 def cart_detail(request):
     cart = Cart(request)
     for item in cart:

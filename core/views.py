@@ -4,6 +4,7 @@ from .models import Product,Category,Brand
 from cart.forms import CartAddProductForm
 from django.views.generic.list import ListView
 from django.db.models import Q
+
 from django.contrib.postgres.search import SearchQuery, SearchRank,SearchVector
 # Create your views here.
 
@@ -71,5 +72,5 @@ class SearchResultsView(ListView):
         )
         return object_list
         
-    
+
     
