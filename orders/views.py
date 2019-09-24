@@ -1,5 +1,5 @@
-from django.shortcuts import render
-from django.db.models import F
+from django.shortcuts import render,redirect
+from django.urls import reverse
 from .models import Order
 from .models import OrderItem
 from .forms import OrderCreateForm
@@ -9,23 +9,23 @@ from accounts.models import CustomerUser
 
 def order_create(request):
     cart = Cart(request)
-    if request.CustomerUser.is_authenticated():
-        if request.method == 'POST':
-            form = OrderCreateForm(request.POST)
-            if form.is_valid():
-                order = form.save()
-                for item in cart:
-                    OrderItem.objects.create(
-                        order=order,
-                        product=item['product'],
-                        price=item['price'],
-                        quantity=item['quantity']
+    if request.method == 'POST':
+        form = OrderCreateForm(request.POST)
+        if form.is_valid():
+            order = form.save()
+            for item in cart:
+                OrderItem.objects.create(
+                    order=order,
+                    product=item['product'],
+                    price=item['price'],
+                    quantity=item['quantity']
                 )
             
-                cart.clear()
-            return render(request, "homepage/created.html", {'order': order})
-        else:
-            form = OrderCreateForm()
-        return render(request, "homepage/create.html", {'form': form})
+            cart.clear()
+            #order_created.delay(order.id)
+            request.session['order_id'] = order.id
+            return redirect(reverse('payment:process'))
     else:
-        return render(request,'homepage/dangky.html')
+        form = OrderCreateForm()
+    return render(request, "homepage/create.html", {'cart':cart,
+                                                        'form': form})

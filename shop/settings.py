@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'paypal.standard.ipn',
+    'payment.apps.PaymentConfig',
     
 ]
 
@@ -150,8 +151,9 @@ AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend',
 )
 SITE_ID = 1
-PAYPAL_TEST = True
 PAYPAL_RECEIVER_EMAIL ='nguyentrunghieu3979@gmail.com'
+PAYPAL_TEST = True
+
 
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'

@@ -25,6 +25,8 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('cart',include('cart.urls')),
     path('',include('orders.urls', namespace='orders')),
+    path('paypal/',include('paypal.standard.ipn.urls')),
+    path('payment/',include('payment.urls')),
     path('',TemplateView.as_view(template_name='homepage/index.html'),name='home')
 
 ]

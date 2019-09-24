@@ -1,14 +1,14 @@
 from django.db import models
 from core.models import Product
 from accounts.models import CustomerUser
+from decimal import *
 # Create your models here.
 
 class Order(models.Model):
     user = models.ForeignKey(CustomerUser, on_delete=models.CASCADE)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
-    paid = models.BooleanField(default=False, help_text="") 
-    # user = models.ForeignKey(User, null) #nguo7i2 ban1
+    paid = models.BooleanField(default=False, help_text="Thanh toan hay chua thanh toan") 
 
 
     class Meta:
@@ -18,7 +18,7 @@ class Order(models.Model):
         return 'Order {}'.format(self.id)
 
     def get_total_cost(self):
-        return sum(item.get_cost() for item in self.items.all())
+        return Decimal(sum(item.get_cost() for item in self.items.all()))
 
 class OrderItem(models.Model):
     order = models.ForeignKey(Order, related_name='items', on_delete=models.CASCADE)
@@ -30,4 +30,4 @@ class OrderItem(models.Model):
         return '{}'.format(self.id)
 
     def get_cost(self):
-        return self.price * self.quantity
+        return Decimal(self.price) * Decimal(self.quantity)
