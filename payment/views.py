@@ -20,14 +20,14 @@ def payment_process(request):
 
     # What you want the button to do.
     paypal_dict = {
-        'business': "setting.PAYPAL_RECEIVER_EMAIL",
+        'business': "sb-lge21258932@business.example.com",
         "amount": '%.2f' % Decimal(order.get_total_cost()).quantize(Decimal('.01')),
         "item_name": "Order {}".format(order.id),
         "invoice": str(order.id),
         "currency_code": 'USD',
         "notify_url": 'http://{}{}'.format(host,reverse('paypal-ipn')),
-        "return_url": 'http://{}{}'.format(host,reverse('payment:done')),
-        "cancel_return": 'http://{}{}'.format(host,reverse('payment:canceled')),
+        "return_url": 'http://{}{}'.format(host,reverse('payment_done')),
+        "cancel_return": 'http://{}{}'.format(host,reverse('payment_canceled')),
         #"custom": "premium_plan",  # Custom command to correlate to some function later (optional)
     }
 

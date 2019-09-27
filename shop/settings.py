@@ -151,7 +151,7 @@ AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend',
 )
 SITE_ID = 1
-PAYPAL_RECEIVER_EMAIL ='nguyentrunghieu3979@gmail.com'
+PAYPAL_RECEIVER_EMAIL ='sb-lge21258932@business.example.com'
 PAYPAL_TEST = True
 
 
