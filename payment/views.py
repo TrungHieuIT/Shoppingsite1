@@ -26,8 +26,8 @@ def payment_process(request):
         "invoice": str(order.id),
         "currency_code": 'USD',
         "notify_url": 'http://{}{}'.format(host,reverse('paypal-ipn')),
-        "return_url": 'http://{}{}'.format(host,reverse('payment_done')),
-        "cancel_return": 'http://{}{}'.format(host,reverse('payment_canceled')),
+        "return_url": 'http://{}{}'.format(host,reverse('payment:done')),
+        "cancel_return": 'http://{}{}'.format(host,reverse('payment:canceled')),
         #"custom": "premium_plan",  # Custom command to correlate to some function later (optional)
     }
 
