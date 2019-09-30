@@ -65,7 +65,7 @@ class SearchResultsView(ListView):
     model = Product
     template_name ='homepage/search.html'
     
-    def get_queryset(self,id):
+    def get_queryset(self):
         query = self.request.GET.get('search')
         object_list = Product.objects.filter(
             Q(pro_name__icontains = query) | Q(price__icontains = query ) | Q(pro_year__icontains = query) | Q(slug__icontains = query)
